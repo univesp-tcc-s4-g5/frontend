@@ -13,8 +13,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigate() {
-    this._router.navigate(['/login']);
+  navigate(url: string) {
+    this._router.navigate([`/${url}`]);
   }
 
 }

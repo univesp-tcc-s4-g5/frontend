@@ -8,18 +8,28 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   imports: [
-      CommonModule,
-      BrowserAnimationsModule,
-      MatToolbarModule,
-      MatButtonModule,
-      MatIconModule,
-      MatCardModule,
-      MatFormFieldModule,
-      MatInputModule,
-      MatProgressSpinnerModule
+    CommonModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatDividerModule,
+    MatSelectModule,
+    MatTableModule,
+    MatSidenavModule,
+    MatChipsModule
   ],
   exports: [
     MatToolbarModule,
@@ -28,7 +38,12 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDividerModule,
+    MatSelectModule,
+    MatTableModule,
+    MatSidenavModule,
+    MatChipsModule
   ]
 })
 

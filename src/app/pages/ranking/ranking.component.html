@@ -1,22 +1,47 @@
 <div class="container">
 
-    <div>
+    <div class="title">
         <h1>Ranking</h1>
     </div>
 
-    <div>
+    <div class="image-container">
         <div class="ranking-image"></div>
     </div>
 
-    <div>
+    <div class="ranking-table">
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Nome </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Points Column -->
+            <ng-container matColumnDef="points">
+                <th mat-header-cell *matHeaderCellDef> Pontos </th>
+                <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+    </div>
+
+    <div class="user-score">
         <!-- voce esta na []  colocacao -->
     </div>
 
-    <div>
+    <div class="user-filter">
         <div>MES</div>
         <div>Semana</div>
     </div>
-
-
 
 </div>

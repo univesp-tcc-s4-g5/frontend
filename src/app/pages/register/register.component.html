@@ -1,1 +1,50 @@
-<p>register works!</p>
+<div class="container">
+
+    <div class="header">
+        Cadastrar novo usuario
+    </div>
+
+    <div class="register-form">
+        <mat-form-field appearance="fill">
+            <mat-label>Primeiro Nome</mat-label>
+            <input matInput placeholder="" [(ngModel)]="firstName" name="firstName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Sobrenome</mat-label>
+            <input matInput placeholder="" [(ngModel)]="lastName" name="lastName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <!-- verificar se o registro ja existe na base -->
+            <mat-label>Registro</mat-label>
+            <input matInput placeholder="" [(ngModel)]="ra" name="ra">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Senha</mat-label>
+            <input matInput placeholder="" [(ngModel)]="password" name="password">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Confirmar senha</mat-label>
+            <input matInput placeholder="" [(ngModel)]="confirmPassword" name="confirmPassword">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select placeholder="Curso" [(ngModel)]="courses" name="curso">
+                <mat-option *ngFor="let course of courses" [value]="course">
+                    {{ course }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select placeholder="Periodo" [(ngModel)]="educationalHubs" name="period">
+                <mat-option *ngFor="let hub of educationalHubs" [value]="hub">
+                    {{ hub }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="btn btn-primary">Enviar</button>
+
+    </div>
+
+</div>

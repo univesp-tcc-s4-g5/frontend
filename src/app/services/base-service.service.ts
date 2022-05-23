@@ -9,7 +9,7 @@ import { IEntity } from '../interfaces/IEntity';
   providedIn: 'root'
 })
 
-export class BaseServiceService<T extends IEntity> implements IBaseService<T> {
+export class BaseService<T extends IEntity<string>> implements IBaseService<T> {
 
   public baseUrl = environment.baseUrl;
 

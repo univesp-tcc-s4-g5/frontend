@@ -7,14 +7,14 @@
 
     <div class="menus">
 
-        <mat-card (click)="navigate()">
+        <mat-card (click)="navigate('base-de-conhecimento')">
             <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
                 alt="Photo of a Shiba Inu">
             <mat-card-content>
                 <p> Base de Conhecimento </p>
             </mat-card-content>
         </mat-card>
-        <mat-card>
+        <mat-card (click)="navigate('perguntas')">
             <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
                 alt="Photo of a Shiba Inu">
             <mat-card-content>
@@ -22,7 +22,7 @@
             </mat-card-content>
         </mat-card>
 
-        <mat-card>
+        <mat-card (click)="navigate('saldo')">
             <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
                 alt="Photo of a Shiba Inu">
             <mat-card-content>
@@ -33,7 +33,7 @@
             </mat-card-content>
         </mat-card>
 
-        <mat-card>
+        <mat-card (click)="navigate('ranking')">
             <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
                 alt="Photo of a Shiba Inu">
             <mat-card-content>
