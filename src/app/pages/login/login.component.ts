@@ -9,13 +9,30 @@ import { LoginService } from 'src/app/services/login/login.service';
 })
 export class LoginComponent {
 
+  public loggedUser = this._loginService.getLoggedUser();
+  public loginInput = {
+    user: '', password: ''
+  }
+
   constructor(
     private _loginService: LoginService
     , private _router: Router
   ) { }
 
+  ngOnInit() {
+    if (this.loggedUser) {
+      this._router.navigate(['/home']);
+    }
+  }
+
   login() {
-    this.navigate();
+    this._loginService.login(this.loginInput.user, this.loginInput.password)
+      .subscribe((loggedUser: boolean) => {
+          if (!loggedUser) {
+            return console.error('Login failed');
+          }
+          this._router.navigate(['/home']);
+        });
 
   }
 

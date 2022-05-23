@@ -3,6 +3,14 @@
     flex-direction: column;
 }
 
+.container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
 mat-card {
     margin: 7%;
 }
@@ -13,8 +21,8 @@ mat-card {
 }
 
 .logo {
-    width: 20rem;
-    height: 12rem;
+    width: 15rem;
+    height: 8rem;
     background-image: url('../../../assets/images/univesp_logo.jpg');
     background-size: cover;
     background-position: center;

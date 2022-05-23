@@ -1,3 +1,6 @@
+<!-- TODO: create a different view for desktop users -->
+<!-- TODO: remove the hamburger menu, since the user is not logger yet -->
+ 
 <div class="container">
 
     <mat-card>
@@ -7,12 +10,12 @@
 
         <div class="panel-body">
 
-            <mat-form-field>
-                <input matInput placeholder="Usuário" name="user" required>
+            <mat-form-field appearance="fill">
+                <input [(ngModel)]="loginInput.user" matInput placeholder="Usuário" name="user" required>
             </mat-form-field>
 
-            <mat-form-field>
-                <input matInput placeholder="Senha" name="password" required>
+            <mat-form-field appearance="fill">
+                <input [(ngModel)]="loginInput.password" matInput placeholder="Senha" name="password" required>
             </mat-form-field>
 
             <button (click)="login()" mat-raised-button color="primary" type="submit"
@@ -20,5 +23,13 @@
 
         </div>
     </mat-card>
+
+    <div>
+        <div>Não possui uma conta? Cadastre-se <a href="/registrar">Aqui</a> </div>
+    </div>
+
+    <div>
+        <div><a href="">Esqueci minha senha</a> </div>
+    </div>
 
 </div>
