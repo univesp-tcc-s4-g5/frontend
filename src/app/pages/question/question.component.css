@@ -1,0 +1,26 @@
+.container {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+}
+
+.question-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.question-form > .title {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.question-form > .question {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}

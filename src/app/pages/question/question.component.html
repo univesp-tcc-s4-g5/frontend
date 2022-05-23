@@ -1,0 +1,64 @@
+<div class="container">
+
+    <div class="header">
+
+    </div>
+
+    <div class="question-form">
+
+        <div class="title">
+
+            <mat-form-field>
+                <input matInput placeholder="Titulo" [(ngModel)]="questionInput.title">
+            </mat-form-field>
+
+        </div>
+
+        <div class="content">
+            <mat-form-field>
+                <input matInput placeholder="Pergunta" [(ngModel)]="questionInput.description" name="question" required>
+            </mat-form-field>
+        </div>
+
+        <div class="subject">
+
+            <mat-form-field>
+                <mat-select>
+                    <mat-option *ngFor="let subject of subjects" [value]="subject">
+                        {{subject}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <!-- make it collapse -->
+        <div class="tags">
+            <mat-form-field class="example-chip-list" appearance="fill">
+                <mat-label>Tags</mat-label>
+                <mat-chip-list #chipList aria-label="Tag Selection">
+                    <mat-chip *ngFor="let tag of tags" (removed)="removeTag(tag)">
+                        {{tag.name}}
+                        <button matChipRemove>
+                            <mat-icon>cancel</mat-icon>
+                        </button>
+                    </mat-chip>
+                    <input placeholder="Criar Nova Tag" 
+                        [matChipInputFor]="chipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" 
+                        [matChipInputAddOnBlur]="addOnBlur"
+                        (matChipInputTokenEnd)="addTag($event)">
+                </mat-chip-list>
+            </mat-form-field>
+            <!-- create a chip for each tag add -->
+
+        </div>
+
+        <button matButton class="btn" (click)="create()">Enviar</button>
+
+    </div>
+
+    <div class="tips">
+
+    </div>
+
+</div>
