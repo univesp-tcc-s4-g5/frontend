@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Cache node modules
+      - name: Cache
         uses: actions/cache@v1
         with:
           path: ~/.npm
@@ -29,7 +29,7 @@ jobs:
 
       - name: Install Angular CLI
         if: 
-          steps.cache-nodemodules.outputs.cache-hit != 'true'
+          steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Build
@@ -60,7 +60,7 @@ jobs:
         env:
           API_TOKEN_GITHUB_ACTION: ${{ secrets.TOKEN_GITHUB_ACTION }}
         with:
-          source_directory: dist
+          source-directory: dist
           destination-github-username: univesp-tcc-s4-g5
           destination-github-repository: univesp-tcc-s4-g5.github.io
           user-email: hugo-pdf@hotmail.com
