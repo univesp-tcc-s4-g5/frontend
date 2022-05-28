@@ -63,5 +63,6 @@ jobs:
           destination-github-username: 'univesp-tcc-s4-g5'
           destination-repository-name: 'univesp-tcc-s4-g5.github.io'
           user-email: hugo-pdf@hotmail.com
+          destination-repository-username: hugueds
           user-name: hugueds
           target-branch: gh-pages
