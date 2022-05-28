@@ -60,8 +60,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: deploy_dist/
-          destination-github-username: 'univesp-tcc-s4-g5'
+          destination-github-username: 'hugueds'
           destination-repository-name: univesp-tcc-s4-g5.github.io
           user-email: hugo-pdf@hotmail.com
-          user-name: hugueds
           target-branch: gh-pages
