@@ -7,7 +7,7 @@
     "build": "ng build --source-map false",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy"
+    "deploy": "ng deploy --no-silent --repo=https://github.com/univesp-tcc-s4-g5/univesp-tcc-s4-g5.github.io.git "
   },
   "private": true,
   "dependencies": {
