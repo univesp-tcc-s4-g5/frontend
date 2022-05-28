@@ -41,12 +41,6 @@ jobs:
         with:
           name: deploy_dist
           path: dist
-      - name: Archive code coverage result
-        if: success()
-        uses: actions/upload-artifact@v1
-        with:
-          name: deploy_coverage
-          path: coverage
 
   deploy:
     runs-on: ubuntu-latest
@@ -54,14 +48,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+
       - name: Download build
         uses: actions/download-artifact@v1
         with:
           name: deploy_dist
           source-directory: dist
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+
+      - name: Push directory to another repository
+        uses: cpina/github-action-push-to-another-repository@v1.4.2
+        env:
+          API_TOKEN_GITHUB_ACTION: ${{ secrets.TOKEN_GITHUB_ACTION }}
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: /
+          source_directory: dist
+          destination-github-username: univesp-tcc-s4-g5
+          destination-github-repository: univesp-tcc-s4-g5.github.io
+          user-email: hugo-pdf@hotmail.com
+          target-branch: gh-pages
