@@ -53,12 +53,11 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: deploy_dist
-          source-directory: dist
 
       - name: Push directory to another repository
         uses: cpina/github-action-push-to-another-repository@v1.4.2
         env:
-          API_TOKEN_GITHUB_ACTION: ${{ secrets.TOKEN_GITHUB_ACTION }}
+          API_TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB_ACTION }}
         with:
           source-directory: dist
           destination-github-username: univesp-tcc-s4-g5
