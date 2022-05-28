@@ -57,7 +57,7 @@ jobs:
       - name: Push directory to another repository
         uses: cpina/github-action-push-to-another-repository@v1.4.2
         env:
-          API_TOKEN_GITHUB: ${{secrets.GITHUB_TOKEN}}
+          API_TOKEN_GITHUB: ${{secrets.GH_TOKEN}}
         with:
           source-directory: deploy_dist/
           destination-github-username: 'univesp-tcc-s4-g5'
