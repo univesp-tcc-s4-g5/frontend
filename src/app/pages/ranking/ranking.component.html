@@ -40,8 +40,17 @@
     </div>
 
     <div class="user-filter">
-        <div>MES</div>
-        <div>Semana</div>
+
+       <mat-form-field>
+              <mat-label>Filtro</mat-label>
+              <mat-radio-group>
+                <mat-radio-button value="all">Todos</mat-radio-button>
+                <mat-radio-button value="week">Semana</mat-radio-button>
+                <mat-radio-button value="month">Mês</mat-radio-button>
+                <mat-radio-button value="year">Ano</mat-radio-button>
+              </mat-radio-group>
+       </mat-form-field>
+
     </div>
 
 </div>
