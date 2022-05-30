@@ -12,6 +12,7 @@ export class LoginService {
   constructor() { }
 
   login(username: string, password: string): Observable<boolean> {
+    username = username.toLowerCase();
     if (username === 'admin' && password === 'admin') {
       LoginService.user = new LoggedUser('admin', 'email@email.com', '1234678', new Date(), true);
       return of(true);

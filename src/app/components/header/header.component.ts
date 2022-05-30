@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoggedUser } from 'src/app/models/LoggedUser';
 import { LoginService } from 'src/app/services/login/login.service';
@@ -10,8 +11,17 @@ import { LoginService } from 'src/app/services/login/login.service';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() menuClicked = new EventEmitter<void>();
+
   public loggedUser?: LoggedUser;
   public show = true;
+  public menuOpened = false;
+
+  // create an event emmiter to pass the value to the parent component
+  public toggleMenu() {
+    this.menuClicked.emit();
+
+  }
 
   constructor(private loginService: LoginService
     , private router: Router) { }
