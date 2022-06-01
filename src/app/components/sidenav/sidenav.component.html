@@ -2,40 +2,48 @@
     <mat-drawer #drawer class="drawer" mode="over">
         <!-- a round picture of the user -->
         <div class="user-picture-container">
-             <img class="user-picture" alt="">
+            <img class="user-picture" alt="">
         </div>
 
         <!-- user name -->
-        <div class="user-name"> <h3>User Name</h3> </div>
+        <div class="user-name">
+            <h3>User Name</h3>
+        </div>
 
         <!-- create menus -->
 
-        <mat-nav-list>
-            <a mat-list-item routerLink="/home">
-                <mat-icon>home</mat-icon>
-                <span>Inicio</span>
-            </a>
-            <a mat-list-item routerLink="/about">
-                <mat-icon>info</mat-icon>
-                <span>Sobre</span>
-            </a>
-            <a mat-list-item routerLink="/help">
-                <mat-icon>contact_mail</mat-icon>
-                <span>Ajuda</span>
-            </a>
-            <a mat-list-item routerLink="/logout">
-                <!-- door icon -->
-                <mat-icon>exit_to_app</mat-icon>
-                <span>Sair</span>
-            </a>
+        <div class="menu">
 
-            <a mat-list-item >
+            <mat-nav-list>
+                <a mat-list-item routerLink="/home">
+                    <mat-icon>home</mat-icon>
+                    <span>Inicio</span>
+                </a>
+                <a mat-list-item routerLink="/about">
+                    <mat-icon>info</mat-icon>
+                    <span>Sobre</span>
+                </a>
+                <a mat-list-item routerLink="/help">
+                    <mat-icon>contact_mail</mat-icon>
+                    <span>Ajuda</span>
+                </a>
+                <a mat-list-item routerLink="/logout">
+                    <!-- door icon -->
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Sair</span>
+                </a>
+
+
+
+            </mat-nav-list>
+        </div>
+
+        <div class="version-container">
+            <a mat-list-item>
                 <span>Versão</span>
                 <span class="version">1.0.0</span>
             </a>
-
-        </mat-nav-list>
-
+        </div>
 
     </mat-drawer>
     <!-- <mat-drawer-content>
