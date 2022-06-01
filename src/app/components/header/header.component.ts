@@ -31,6 +31,10 @@ export class HeaderComponent implements OnInit {
         if (event.toString().includes('NavigationStart')) {
           const navigationStart = event as NavigationStart;
           this.page = navigationStart.url;
+          if (this.page === '/login') {
+            this.show = false;
+          }
+
         }
       });
 
