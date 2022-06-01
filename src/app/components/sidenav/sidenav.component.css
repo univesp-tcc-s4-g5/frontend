@@ -1,0 +1,36 @@
+.container {
+    min-height: 700px;
+}
+.drawer {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-picture-container {
+    display: flex;
+    justify-content: center;
+}
+
+.user-picture {
+    justify-content: center;
+    margin-top: 5vh;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 1px solid #000;
+    background-image: url('/assets/images/icons/univesp-logo.png');
+    background-size: cover;
+}
+
+
+.user-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 5vh;
+    text-align: center;
+    align-content: center;
+}

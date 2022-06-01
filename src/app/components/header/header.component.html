@@ -5,8 +5,9 @@
                 <mat-icon>menu</mat-icon>
             </button>
             <span class="spacer"></span>
-            <button mat-icon-button>
-                <mat-icon>account_circle</mat-icon>
+            <!-- back arrow -->
+            <button mat-icon-button (click)="back()" *ngIf="page != '/home'">
+                <mat-icon>arrow_back</mat-icon>
             </button>
         </mat-toolbar>
     </ng-container>

@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 import { LoggedUser } from 'src/app/models/LoggedUser';
 import { LoginService } from 'src/app/services/login/login.service';
 
@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   public loggedUser?: LoggedUser;
   public show = true;
   public menuOpened = false;
+  public page?: string;
 
   // create an event emmiter to pass the value to the parent component
   public toggleMenu() {
@@ -24,9 +25,20 @@ export class HeaderComponent implements OnInit {
   }
 
   constructor(private loginService: LoginService
-    , private router: Router) { }
+    , private router: Router) { 
+
+      this.router.events.subscribe(event => {
+        if (event.toString().includes('NavigationStart')) {
+          const navigationStart = event as NavigationStart;
+          this.page = navigationStart.url;
+        }
+      });
+
+
+    }
 
   ngOnInit(): void {
+    
     this.loggedUser = this.loginService.getLoggedUser();
     if (!this.loggedUser) {
       console.log('No user logged in');
@@ -34,6 +46,10 @@ export class HeaderComponent implements OnInit {
       return;
     }
     this.show = true;
+  }
+
+  public back() {
+    this.router.navigate(['/home']);
   }
 
 }

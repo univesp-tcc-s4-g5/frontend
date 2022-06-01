@@ -14,6 +14,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatTableModule,
     MatSidenavModule,
     MatChipsModule,
-    MatRadioModule
+    MatRadioModule,
+    MatListModule
   ],
   exports: [
     MatToolbarModule,
@@ -46,7 +48,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatTableModule,
     MatSidenavModule,
     MatChipsModule,
-    MatRadioModule
+    MatRadioModule,
+    MatListModule
   ]
 })
 
