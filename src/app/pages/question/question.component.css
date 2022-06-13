@@ -1,26 +1,73 @@
 .container {
-    margin-top: 20px;
+    margin-top: 2.5rem;
     display: flex;
     width: 100%;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+
+}
+
+.header-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
 }
 
 .question-form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     justify-content: center;
 }
 
 .question-form > .title {
-    width: 100%;
     text-align: center;
     display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.question-form > .title > mat-form-field {
+    text-align: center;
+    display: flex;
+    width: 100%;
     justify-content: center;
 }
 
-.question-form > .question {
+input {
+    width: 100%;
+    text-align: center;
+}
+.question-form > .content {
     display: flex;
     width: 100%;
     text-align: center;
     justify-content: center;
+}
+
+.question-form > .subject {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.question-form > .tags {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+button {
+    margin: 2.5rem;
 }

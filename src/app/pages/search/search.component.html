@@ -9,12 +9,34 @@
     </div>
 
     <div class="results">
+        <ng-container *ngFor="let q of questions ">
+
+            <mat-card [routerLink]="['/perguntas/', q.id]">
+                <!-- link to the answer-->
+                <mat-card-header>
+                    <mat-card-title>
+                        <h3> {{q.title }}</h3>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p matLine> {{ q.description }}</p>
+                    <!-- tags -->
+                    <mat-chip-list>
+                        <mat-chip *ngFor="let tag of q.tags">
+                            {{ tag }}
+                        </mat-chip>
+                    </mat-chip-list>
+                </mat-card-content>
+            </mat-card>
+
+            <mat-divider></mat-divider>
+        </ng-container>
+
+        <!-- 
         <mat-card> </mat-card>
         <mat-divider></mat-divider>
         <mat-card> </mat-card>
-        <mat-divider></mat-divider>
-        <mat-card> </mat-card>
-        <mat-divider></mat-divider>
+        <mat-divider></mat-divider> -->
     </div>
 
 </div>

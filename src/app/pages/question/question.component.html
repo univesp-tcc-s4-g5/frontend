@@ -2,27 +2,35 @@
 
     <div class="header">
 
+        <div class="header-text">
+            Registre uma pergunta
+        </div>
+
     </div>
 
     <div class="question-form">
 
         <div class="title">
 
-            <mat-form-field>
-                <input matInput placeholder="Titulo" [(ngModel)]="questionInput.title">
+            <mat-form-field appearance="fill">
+                <mat-label>Titulo da Pergunta</mat-label>
+                <input matInput [(ngModel)]="questionInput.title">
             </mat-form-field>
 
         </div>
 
         <div class="content">
-            <mat-form-field>
-                <input matInput placeholder="Pergunta" [(ngModel)]="questionInput.description" name="question" required>
+            <mat-form-field appearance="fill">
+                <mat-label>Pergunta</mat-label>
+                <textarea cdkTextareaAutosize cdkAutosizeMinRows="15" cdkAutosizeMaxRows="20" matInput
+                    [(ngModel)]="questionInput.description" name="question" required></textarea>
             </mat-form-field>
         </div>
 
         <div class="subject">
 
-            <mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Disciplina</mat-label>
                 <mat-select>
                     <mat-option *ngFor="let subject of subjects" [value]="subject">
                         {{subject}}
@@ -42,10 +50,8 @@
                             <mat-icon>cancel</mat-icon>
                         </button>
                     </mat-chip>
-                    <input placeholder="Criar Nova Tag" 
-                        [matChipInputFor]="chipList"
-                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" 
-                        [matChipInputAddOnBlur]="addOnBlur"
+                    <input placeholder="Criar Nova Tag" [matChipInputFor]="chipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
                         (matChipInputTokenEnd)="addTag($event)">
                 </mat-chip-list>
             </mat-form-field>
@@ -53,7 +59,7 @@
 
         </div>
 
-        <button matButton class="btn" (click)="create()">Enviar</button>
+        <button mat-raised-button color="primary" type="submit" (click)="create()">Enviar</button>
 
     </div>
 

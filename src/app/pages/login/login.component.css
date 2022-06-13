@@ -1,19 +1,19 @@
 .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 
-.container > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 5%;
+.container>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5%;
 }
 
-.container > mat-card {
+.container>mat-card {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -22,44 +22,50 @@
 }
 
 .logo-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
-    width: 15rem;
-    height: 6rem;
-    background-image: url('/assets/images/univesp_banner.jpg');
-    background-size: cover;
-    background-position: center;
-    /* background-repeat: no-repeat; */
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    justify-content: center;
+  width: 15rem;
+  height: 6rem;
+  background-image: url('/assets/images/univesp_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  justify-content: center;
 }
 
 
 .panel-body {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
 }
 
 
 @media screen and (min-width: 600px) {
-    .panel-body {
-        display: flex;
-        flex: 1 1 auto;
-        flex-direction: column;
-    }
+  .panel-body {
+  
+  }
 
-    .container {
-    }
+  .container {}
 
 
-    .logo {
-    }
+  .logo {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
 
+  .containst>mat-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 1%;
+
+  }
 
 }
-

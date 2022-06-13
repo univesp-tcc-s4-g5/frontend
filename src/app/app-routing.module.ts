@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AnswerComponent } from './pages/answer/answer.component';
 import { BalanceComponent } from './pages/balance/balance.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'ranking', component: RankingComponent },
   { path: 'registrar', component: RegisterComponent },
   { path: 'base-de-conhecimento', component: SearchComponent },
-  { path: 'perguntas', component: QuestionComponent },
+  { path: 'criar-pergunta', component: QuestionComponent },
+  { path: 'perguntas/:id', component: AnswerComponent },
   { path: 'saldo', component: BalanceComponent },
   { path: '**', redirectTo: 'login' }
 ];

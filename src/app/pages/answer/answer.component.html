@@ -1,0 +1,58 @@
+<div class="container">
+
+    <div class="question">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <h3>Qual a raiz quadrada de 81? </h3>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p matLine>E</p>
+                <mat-chip-list>
+                    <mat-chip>tag 1</mat-chip>
+                    <mat-chip>tag 2</mat-chip>
+                    <mat-chip>tag 3</mat-chip>
+                </mat-chip-list>
+            </mat-card-content>
+        </mat-card>
+        <mat-divider></mat-divider>
+    </div>
+
+    <div class="answers">
+
+        <ng-container *ngFor="let a of  answers">
+            <mat-card>
+                <mat-card-content>
+
+                    <div class="user">
+                        <div class="user-image">
+                            <img src="{{a.student.picture}}" alt="">
+                        </div>
+                        <div class="user-name">
+                            <span>{{a.student.name}}</span>
+                        </div>
+                    </div>
+
+                    <div class="answer-content">
+                        <div>
+                            <p>{{a.content}}</p>
+                        </div>
+
+                    </div>
+
+                    <div class="question-score">
+                        <mat-icon class="arrow-up" (click)="vote(this)">arrow_upward</mat-icon>
+                        <div>99</div>
+                        <mat-icon class="arrow-down" (click)="vote(this)">arrow_downward</mat-icon>
+                    </div>
+
+                </mat-card-content>
+
+            </mat-card>
+
+            <mat-divider></mat-divider>
+        </ng-container>
+    </div>
+
+</div>

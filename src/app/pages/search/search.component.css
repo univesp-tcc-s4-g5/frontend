@@ -16,11 +16,40 @@
     width: 80%;
 }
 
-.results > mat-card {
+.results {
+    width: 100%;
     display: flex;
-    width: 85%;
+    flex-direction: column;
     justify-content: center;
-    justify-self: center;;
-    align-self: center;
+    align-items: center;
     margin-top: 2%;
 }
+
+.results > mat-card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 2%;
+}
+
+mat-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-self: center;
+    justify-content: center;
+}
+
+mat-card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+} 
+
+mat-card-title {
+    display: flex;
+    font-size: 1.5em;
+    color: blue;
+    width: 100%;
+} 

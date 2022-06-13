@@ -17,6 +17,7 @@ import { MaterialModule } from './modules/material.module';
 import { QuestionComponent } from './pages/question/question.component';
 import { BalanceComponent } from './pages/balance/balance.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { AnswerComponent } from './pages/answer/answer.component';
 
 
 
@@ -32,7 +33,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     FooterComponent,
     QuestionComponent,
     BalanceComponent,
-    SidenavComponent
+    SidenavComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,

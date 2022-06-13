@@ -7,9 +7,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  questions = [
+    {
+      id: '1',
+      title: 'What is the name of the main character in the game?',
+      description: ' this is a question about the game',
+      subject: '',
+      tags: ['a', 'b', 'c'],
+    },
+    {
+      id: '2',
+      title: 'What is the name of the main character in the game?',
+      description: ' this is a question about the game',
+      subject: '',
+      tags: ['a', 'b']
+    },
+    {
+      id: '3',
+      title: 'What is the name of the main character in the game?',
+      description: ' this is a question about the game',
+      subject: '',
+      tags: [ 'a']
+
+    }
+  ];
+      
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  search(search: string) {
+    console.log(search);
   }
 
 }

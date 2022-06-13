@@ -8,7 +8,9 @@
             <div class="logo"></div>
         </div>
 
-        <div class="panel-body">
+        <!-- <div class="panel-body"> -->
+
+            <form class="panel-body">
 
             <mat-form-field appearance="fill">
                 <input [(ngModel)]="loginInput.user" matInput placeholder="Usuário" name="user" required>
@@ -21,7 +23,8 @@
             <button (click)="login()" mat-raised-button color="primary" type="submit"
                 class="btn btn-primary">Entrar</button>
 
-        </div>
+            </form>
+        <!-- </div> -->
     </mat-card>
 
     <div class="sign-in">
