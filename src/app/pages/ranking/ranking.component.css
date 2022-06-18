@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .ranking-image {
@@ -23,7 +24,6 @@
     justify-content: center;
     justify-self: center;
     justify-items: center
-    ;
 }
 
 table {
@@ -32,7 +32,7 @@ table {
 }
 
 th {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #fff;
     background-color: #00a8ff;
@@ -42,4 +42,33 @@ th {
 .mat-header-cell {
     justify-content: center;
     text-align: center;;
+}
+
+.user-score {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.user-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 7.5%;
+}
+
+mat-radio-group {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.user-filter mat-radio-button {
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

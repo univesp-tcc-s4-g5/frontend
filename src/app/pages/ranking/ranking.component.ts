@@ -16,6 +16,9 @@ interface Ranking {
 export class RankingComponent implements OnInit {
 
   public displayedColumns: string[] = ['position', 'name', 'points'];
+
+  public userPosition: number = 19;
+
   public dataSource: Ranking[] = [{
     position: 1,
     name: 'Max',
