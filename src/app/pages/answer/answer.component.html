@@ -8,7 +8,7 @@
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content>
-                <p matLine>E</p>
+                <p matLine> {{ question }} </p>
                 <mat-chip-list>
                     <mat-chip>tag 1</mat-chip>
                     <mat-chip>tag 2</mat-chip>
@@ -38,12 +38,11 @@
                         <div>
                             <p>{{a.content}}</p>
                         </div>
-
                     </div>
 
                     <div class="question-score">
                         <mat-icon class="arrow-up" (click)="vote(this)">arrow_upward</mat-icon>
-                        <div>99</div>
+                        <div>{{ a.votes }} </div>
                         <mat-icon class="arrow-down" (click)="vote(this)">arrow_downward</mat-icon>
                     </div>
 

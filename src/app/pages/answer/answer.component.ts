@@ -7,47 +7,49 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnswerComponent implements OnInit {
 
-  answers = [
+  public question = "Estive pensando esses dias, acabei me esquecendo, alguem da comunidade poderia me auxilar nesta duvida cruel?";
+
+  public answers = [
     {
       votes: 99,
       stars: 5,
       createdAt: new Date(),
-      content: ' oeaoiresntoiaersntn',
+      content: 'tenho pHD na area e tenho certeza que eh 9',
       userId: '1',
       student: {
         id: '1',
         name: 'John Doe',
         email: '@@@',
         educationalHub: 'santo andre',
-        picture: 'https://randomuser.me/api/portraits/'
+        picture: 'assets/images/users/user-1.png',
       }
     },
     {
-      votes: 99,
+      votes: 10,
       stars: 5,
       createdAt: new Date(),
-      content: ' oeaoiresntoiaersntn',
+      content: 'essa eh dificil, mas eu imagino que seja 22',
       userId: '1',
       student: {
         id: '1',
-        name: 'John Doe',
+        name: 'Maria Almeida',
         email: '@@@',
         educationalHub: 'santo andre',
-        picture: 'https://randomuser.me/api/portraits/'
+        picture: 'assets/images/users/user-2.png'
       }
     },
     {
-      votes: 99,
+      votes: -5,
       stars: 5,
       createdAt: new Date(),
-      content: ' oeaoiresntoiaersntn',
+      content: 'nao sei, espero ter ajudado',
       userId: '1',
       student: {
         id: '1',
-        name: 'John Doe',
+        name: 'Augusto Silva',
         email: '@@@',
         educationalHub: 'santo andre',
-        picture: 'https://randomuser.me/api/portraits/'
+        picture: 'assets/images/users/user-3.png'
       }
     }
   ];
