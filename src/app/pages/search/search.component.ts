@@ -7,13 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  
+  
+
   questions = [
     {
       id: '1',
-      title: 'What is the name of the main character in the game?',
-      description: ' this is a question about the game',
+      title: 'Qual a raiz quadrada de 81?',
+      description: 'Estive pensando esses dias, acabei me esquecendo, alguem da comunidade poderia me auxilar nesta duvida cruel?',
       subject: '',
-      tags: ['a', 'b', 'c'],
+      tags: ['calculo', 'operacoes'],
     },
     {
       id: '2',

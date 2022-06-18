@@ -47,6 +47,15 @@ mat-card-header {
     width: 100%;
 } 
 
+mat-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    margin-top: -5%;
+    margin-left: 3%;
+}
+
 mat-card-title {
     display: flex;
     font-size: 1.5em;
