@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="title">
-        <h1>Bem vindo [Aluno] </h1>
+        <h1>Bem vindo {{ studentName }} </h1>
     </div>
 
 
@@ -13,6 +13,7 @@
                 <p> Base de Conhecimento </p>
             </mat-card-content>
         </mat-card>
+
         <mat-card (click)="navigate('criar-pergunta')">
             <img mat-card-image src="/assets/images/icons/question.jpg" >
             <mat-card-content>

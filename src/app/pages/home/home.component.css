@@ -12,7 +12,6 @@ h1 {
   margin-top: 2.5rem;
   justify-self: unset;
   text-align: center;
-  ;
 }
 
 .menus {
@@ -29,11 +28,14 @@ h1 {
 
 @media (min-width: 768px) {
   .menus {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 5%;
+    grid-gap: 0%;
     width: 90%;
     height: 90%;
+  }
 
+  mat-card {
+    max-width: 50%;
   }
 }
