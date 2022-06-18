@@ -1,6 +1,29 @@
 <div class="container">
     <div class="balance">
+        <div class="balance-up">
 
-        Seu saldo atual é de R$ {{ balance }}
+            Seu saldo atual é de
+        </div>
+        <div class="balance-score">
+            {{ userInfo.balance }}
+        </div>
+        <div class="balance-down">
+            Pontos
+        </div>
     </div>
+    <div class="summary">
+        <div>
+            Voce respondeu {{userInfo.answeredQuestions}} questões
+        </div>
+        <div>
+            Voce realizou {{userInfo.createdQuestions}} questões
+        </div>
+        <div>
+            {{userInfo.upvotedAnswers}} respostas foram votadas positivamente
+        </div>
+        <div>
+            {{userInfo.favoriteAnswers}} respostas foram votadas como favoritas pelo autor
+        </div>
+    </div>
+
 </div>

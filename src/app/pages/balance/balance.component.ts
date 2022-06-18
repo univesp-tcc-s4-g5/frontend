@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BalanceComponent implements OnInit {
 
-  public balance: number = 0;
+  public userInfo = {
+    name: '',
+    balance: 0,
+    answeredQuestions: 0,
+    createdQuestions: 0,
+    upvotedAnswers: 0,
+    favoriteAnswers: 0
+  };
 
   constructor() { }
 
